@@ -1,0 +1,155 @@
+/* Some basic resets */
+
+h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+a { text-decoration: none;}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* basic styling for mobile */
+body {
+    font-family: "Khand", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background: url(images/morocco.png);
+    color: #333;
+    padding: 20px;
+}
+
+/* Typography styling */
+
+h1, h2, h3 {
+    font-family: "Kameron", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    color: #5C71A5;
+}
+
+h1 {
+    font-size: 5em;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-weight: 400;
+    color: #000;
+}
+
+h3 {
+    font-size: 2rem;
+    margin-bottom: .5em;
+}
+
+p {
+    line-height: 1.5em;
+    margin-bottom: 1em;
+}
+
+a {
+    font-weight: 600;
+    color:#5C71A5;
+}
+
+/* Section Styling */
+
+section article {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    margin-bottom: 50px;
+}
+
+section article img {
+    border-radius: 10px;
+}
+
+/* Aside Styling */
+
+aside {
+    background: url(images/morocco-blue.png);
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+aside section > img {
+    margin: auto;
+    border: 5px solid #5C71A5;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+#social {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+footer {
+    padding: 50px;
+    text-align: center;
+}
+
+@media screen and (min-width: 700px){
+    main {
+        display: flex;
+        gap: 20px;
+
+    }
+    section { flex: 2; }
+    aside { flex: 1; }
+
+    h1 { font-size: 7em; text-align: left; }
+}
+
+@media screen and (min-width: 1000px){
+    section .row {
+        display: flex;
+        gap: 20px;
+    }
+
+    .row article {
+        flex: 1;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    main {
+        max-width: 1500px;
+        justify-content: space-between;
+    }
+    main section {
+        max-width: 800px;
+    }
+    main aside {
+        max-width: 480px;
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 20px;
+    }
+    aside section{
+        flex: 1;
+    }
+
+    aside article {
+        flex: 2;
+    }
+
+    #social {
+        gap: 0;
+        justify-content: space-between;
+    }
+
+}
